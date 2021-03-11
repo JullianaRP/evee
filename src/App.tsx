@@ -1,12 +1,12 @@
 import React from 'react';
 import Login from './screens/Login';
-import News from './screens/News';
+import Navbar from './screens/Navbar';
 
 const App = () => {
   return (
     <>
       {/* <Login /> */}
-      <News />
+      <Navbar />
     </>
   );
 };
