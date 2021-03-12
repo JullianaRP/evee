@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, StatusBar, View, Text, Alert} from 'react-native';
+import {SafeAreaView, StyleSheet, StatusBar, View, Text, Alert, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DetailsTextNew from './DetailsTextNew';
 
@@ -18,20 +18,30 @@ const DetailsNew = () => {
             </Text>
           </View>
         </View>
-        <View style={[styles.card, styles.yellow]}>
-          <View style={styles.cardTitle}>
-            <Text style={styles.column}>Recursos Humanos</Text>
+        <ScrollView>
+          <View style={[styles.card, styles.yellow]}>
+            <View>
+              <Text style={styles.column}>Recursos Humanos</Text>
+            </View>
+            <View style={styles.header}>
+              <Text style={styles.cardSubTitle}>
+                O nosso próximo café virtual está chegando!
+              </Text>
+            </View>
+            <View style={styles.footer}>
+              <Text style={styles.saibaMais}>Publicação: 09/03/2021</Text>
+            </View>
           </View>
-          <View style={styles.header}>
-            <Text style={styles.cardSubTitle}>
-              O nosso próximo café virtual está chegando!
-            </Text>
+          <View style={styles.icon}>
+            <Icon
+              style={styles.iconNew}
+              name="newspaper-o"
+              size={20}
+              color="white"
+            />
           </View>
-          <View style={styles.footer}>
-            <Text style={styles.saibaMais}>Publicação: 09/03/2021</Text>
-          </View>
-        </View>
-        <DetailsTextNew />
+          <DetailsTextNew />
+        </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -58,7 +68,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginTop: 20,
     marginLeft: 30,
-    fontSize: 18
+    fontSize: 18,
   },
   textDetailsNew: {
     marginTop: 10,
@@ -84,9 +94,6 @@ const styles = StyleSheet.create({
   yellow: {
     borderLeftColor: '#f9c205',
   },
-  cardTitle: {
-    flexDirection: 'row',
-  },
   column: {
     width: 290,
     textTransform: 'uppercase',
@@ -111,6 +118,20 @@ const styles = StyleSheet.create({
   saibaMais: {
     color: 'gray',
     fontSize: 10,
+  },
+  icon: {
+    width: 46,
+    height: 46,
+    borderRadius: 30,
+    backgroundColor: '#878787',
+    position: 'absolute',
+    right: 20,
+    top: 122,
+    zIndex: 5,
+  },
+  iconNew: {
+    marginTop: 12,
+    marginLeft: 12,
   },
 });
 

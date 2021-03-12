@@ -9,21 +9,19 @@ const Navbar = () => {
     <>
       <SafeAreaView style={styles.container}>
         <StatusBar animated={true} backgroundColor="#004f7a"></StatusBar>
-        <View style={styles.viewColumnsMenu}>
-          <View style={styles.columnIconsMenu}>
+        <View style={styles.columnIconsMenu}>
+          <View style={styles.viewColumnsMenu}>
             <Text
               onPress={() => Alert.alert('Menu!')}
               style={[styles.textNavbar, styles.textNavbarMenu]}>
               <Icon name="navicon" size={20} color="white" />
             </Text>
-          </View>
-          <View style={styles.columnIconsMenu}>
-            <Text style={[styles.textMenuPortonet, styles.textNavbar]}>
+            <Text style={[styles.textNavbar, styles.textMenuPortonet]}>
               Porto<Text style={{fontWeight: '700'}}>net</Text>
             </Text>
-          </View>
-          <View style={styles.columnIconsMenu}>
-            <Text style={styles.textNavbar}>PortoSeguro</Text>
+            <Text style={[styles.textNavbar, styles.textMenuPortoSeguro]}>
+              PortoSeguro
+            </Text>
           </View>
         </View>
         <NavbarNews />
@@ -42,20 +40,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   columnIconsMenu: {
-    width: 160,
+    width: 'auto',
     height: 50,
     backgroundColor: '#004f7a',
   },
   textNavbar: {
     color: 'white',
-    marginTop: 15
+    marginTop: 15,
   },
   textNavbarMenu: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   textMenuPortonet: {
     fontSize: 18,
-    marginTop: 10
+    marginTop: 10,
+    marginLeft: 145,
+  },
+  textMenuPortoSeguro: {
+    marginLeft: 80,
   },
 });
 
