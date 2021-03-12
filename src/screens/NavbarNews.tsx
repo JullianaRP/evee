@@ -10,11 +10,39 @@ const NavbarNews = () => {
   return (
     <>
       <View style={styles.viewColumnsNews}>
-        <Text style={styles.columnIconsNews}>
-          <Icon name="home" size={18} color="#999" />
-        </Text>
-        <Text style={styles.columnIconsNews}>Eventos</Text>
-        <Text style={styles.columnIconsNews}>Recrutamento</Text>
+        <View style={styles.columnIconsNews}>
+          <View style={styles.contentMenu}>
+            <Icon
+              style={styles.iconN}
+              name="newspaper-o"
+              size={20}
+              color="#43a8bf"
+            />
+            <Text style={styles.textNews}>Notícias</Text>
+          </View>
+        </View>
+        <View style={styles.columnIconsNews}>
+          <View style={styles.contentMenuE}>
+            <Icon
+              style={styles.iconE}
+              name="calendar"
+              size={20}
+              color="#43a8bf"
+            />
+            <Text style={styles.textNews}>Eventos</Text>
+          </View>
+        </View>
+        <View style={styles.columnIconsNews}>
+          <View style={styles.contentMenu}>
+            <Icon
+              style={styles.iconR}
+              name="handshake-o"
+              size={20}
+              color="#43a8bf"
+            />
+            <Text style={styles.textNews}>Recrutamento</Text>
+          </View>
+        </View>
       </View>
     </>
   );
@@ -25,9 +53,31 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   columnIconsNews: {
-    width: 160,
-    height: 50,
+    width: 140,
+    height: 60,
     backgroundColor: 'white',
+  },
+  contentMenu: {
+    marginLeft: 40,
+  },
+  contentMenuE: {
+    marginLeft: 46,
+  },
+  iconN: {
+    marginTop: 14,
+    marginLeft: 10,
+  },
+  iconE: {
+    marginTop: 14,
+    marginLeft: 10,
+  },
+  iconR: {
+    marginTop: 14,
+    marginLeft: 26,
+  },
+  textNews: {
+    color: '#43a8bf',
+    fontSize: 12,
   },
 });
 
