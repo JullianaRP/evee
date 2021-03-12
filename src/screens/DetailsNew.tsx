@@ -1,17 +1,20 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, StatusBar, View, Text, Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import DetailsTextNew from './DetailsTextNew';
 
-const Details = () => {
+const DetailsNew = () => {
   return (
     <>
       <SafeAreaView style={styles.container}>
         <StatusBar animated={true} backgroundColor="#004f7a"></StatusBar>
-        <View style={styles.viewColumnsMenu}>
-          <View style={styles.columnIconsMenu}>
-            <Text style={[styles.textNavbar, styles.textNavbarMenu]}>
-              <Icon name="angle-left" size={30} color="#43a8bf" />
-              Detalhe da notícia
+        <View style={styles.columnIconsMenu}>
+          <View style={styles.viewColumnsMenu}>
+            <Text style={[styles.iconNavbar, styles.iconNavbarMenu]}>
+              <Icon name="angle-left" size={44} color="#43a8bf" />
+            </Text>
+            <Text style={[styles.textNavbar]}>
+              <Text style={styles.textDetailsNew}>Detalhe da notícia</Text>
             </Text>
           </View>
         </View>
@@ -28,10 +31,11 @@ const Details = () => {
             <Text style={styles.saibaMais}>Publicação: 09/03/2021</Text>
           </View>
         </View>
+        <DetailsTextNew />
       </SafeAreaView>
     </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -42,15 +46,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   columnIconsMenu: {
-    width: 420,
-    height: 50,
+    width: 'auto',
+    height: 60,
     backgroundColor: '#004f7a',
+  },
+  iconNavbar: {
+    color: 'white',
+    marginTop: 10,
   },
   textNavbar: {
     color: 'white',
-    marginTop: 15,
+    marginTop: 20,
+    marginLeft: 30,
+    fontSize: 18
   },
-  textNavbarMenu: {
+  textDetailsNew: {
+    marginTop: 10,
+  },
+  iconNavbarMenu: {
     marginLeft: 10,
   },
   textMenuPortonet: {
@@ -61,6 +74,7 @@ const styles = StyleSheet.create({
     marginLeft: 14,
     marginRight: 14,
     marginTop: 14,
+    marginBottom: 14,
     width: 'auto',
     height: 'auto',
     backgroundColor: 'white',
@@ -100,4 +114,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Details;
+export default DetailsNew;

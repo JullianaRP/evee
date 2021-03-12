@@ -1,14 +1,14 @@
 import React from 'react';
 import Login from './screens/Login';
 import Navbar from './screens/Navbar';
-import Details from './screens/Details';
+import DetailsNew from './screens/DetailsNew';
 
 const App = () => {
   return (
     <>
       {/* <Login /> */}
       {/* <Navbar /> */}
-      <Details />
+      <DetailsNew />
     </>
   );
 };
