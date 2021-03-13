@@ -3,12 +3,13 @@ import Login from './screens/Login';
 import Navbar from './screens/Navbar';
 import DetailsNew from './screens/DetailsNew';
 
+
 const App = () => {
   return (
     <>
       {/* <Login /> */}
       {/* <Navbar /> */}
-      <DetailsNew />
+      {/* <DetailsNew /> */}
     </>
   );
 };

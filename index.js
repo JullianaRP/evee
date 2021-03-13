@@ -1,9 +1,12 @@
-/**
- * @format
- */
+import 'react-native-gesture-handler';
 
-import {AppRegistry} from 'react-native';
-import App from './src/App';
-import {name as appName} from './app.json';
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
-AppRegistry.registerComponent(appName, () => App);
+const App = () => {
+  return (
+    <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
+  );
+};
+
+export default App;
